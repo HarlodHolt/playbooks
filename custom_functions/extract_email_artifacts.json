@@ -1,0 +1,74 @@
+{
+    "create_time": "2024-07-29T20:37:44.942467+00:00",
+    "custom_function_id": "094af7ec4adef52743a2cd66d80dc49dfb096de5",
+    "description": "Extracts IP addresses, URIs, domains from an email message and creates related artifacts.",
+    "draft_mode": true,
+    "inputs": [
+        {
+            "contains_type": [
+                "vault id"
+            ],
+            "description": "The ID of the vault containing the email.",
+            "input_type": "item",
+            "name": "vault_id",
+            "placeholder": "vault_id"
+        },
+        {
+            "contains_type": [
+                "phantom container id"
+            ],
+            "description": "The identifier of the container to which the artifacts will be added.",
+            "input_type": "item",
+            "name": "container_id",
+            "placeholder": "container_id"
+        },
+        {
+            "contains_type": [],
+            "description": "The severity level of the new artifact. This parameter is optional and defaults to \"Medium\". Acceptable values are \"High\", \"Medium\", or \"Low\".",
+            "input_type": "list",
+            "name": "severity",
+            "placeholder": "Medium"
+        },
+        {
+            "contains_type": [],
+            "description": " A boolean value (\"true\" or \"false\") indicating whether the new artifact should trigger the execution of any active playbooks associated with the container label. This parameter is optional and defaults to \"false\".",
+            "input_type": "list",
+            "name": "run_automation",
+            "placeholder": "false"
+        },
+        {
+            "contains_type": [
+                ""
+            ],
+            "description": "A boolean value (\"true\" or \"false\") indicating whether to extract IP addresses. This parameter is optional and defaults to \"true\".",
+            "input_type": "item",
+            "name": "extract_ip",
+            "placeholder": "true"
+        },
+        {
+            "contains_type": [],
+            "description": "A boolean value (\"true\" or \"false\") indicating whether to extract URIs. This parameter is optional and defaults to \"true\".",
+            "input_type": "item",
+            "name": "extract_uri",
+            "placeholder": "true"
+        },
+        {
+            "contains_type": [],
+            "description": "A boolean value (\"true\" or \"false\") indicating whether to decode safelinks. This parameter is optional and defaults to \"true\".",
+            "input_type": "item",
+            "name": "decode_safelinks",
+            "placeholder": "true"
+        },
+        {
+            "contains_type": [],
+            "description": "A boolean value (\"true\" or \"false\") indicating whether to extract domains from URIs. This parameter is optional and defaults to \"true\".",
+            "input_type": "list",
+            "name": "extract_domain",
+            "placeholder": "true"
+        }
+    ],
+    "outputs": [],
+    "outputs_type": "item",
+    "platform_version": "6.2.2.134",
+    "python_version": "3"
+}
